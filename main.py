@@ -35,7 +35,7 @@ async def cmd_start(message: types.Message):
 async def with_puree(message: types.Message):
     resp = requests.get("https://stepik.org/api/courses/210064")
     resp = resp.json()
-    resp = str(resp['courses'][0]["learners_count"])
+    resp = (resp['courses'][0]["learners_count"])
     await message.answer(f"На курсе {resp} участников")
 
 async def main():
